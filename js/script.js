@@ -38,7 +38,7 @@ $(function() {
         		self.removeColumn();
 			});
 			$columnAddCard.click(function() {
-        		self.addCard(new Card(prompt("Wpisz nazwę karty")));
+        		self.addCard(new Card(prompt('Wpisz nazwę karty')));
 			});
 			// KONSTRUOWANIE ELEMENTU KOLUMNY
 			$column.append($columnTitle)
@@ -86,12 +86,7 @@ $(function() {
       		initSortable();
     	},
     	$element: $('#board .column-container')
-	};
-	//tworzenie nowej kolumny podpieta do board
-	addColumn: function(column) {
-		this.$element.append(column.$element);
-		initSortable(); 
-	}
+	}; 
 	// inicjacja przenoszenia cart
 	function initSortable() {
     	$('.column-card-list').sortable({
