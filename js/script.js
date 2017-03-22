@@ -23,15 +23,6 @@ $(function() {
 			var $columnCardList = $('<ul>').addClass('column-card-list');
 			var $columnDelete = $('<button>').addClass('btn-delete').text('x');
 			var $columnAddCard = $('<button>').addClass('add-card').text('Dodaj kartę');
-			
-			Column.prototype = {
-			    addCard: function(card) {
-			      this.$element.children('ul').append(card.$element);
-			    },
-			    removeColumn: function() {
-			      this.$element.remove();
-			    }
-			};
 
 			// PODPINANIE ODPOWIEDNICH ZDARZEŃ
 			$columnDelete.click(function() {
@@ -50,6 +41,15 @@ $(function() {
 			return $column;
     	}
   	}
+	Column.prototype = {
+		addCard: function(card) {
+			this.$element.children('ul').append(card.$element);
+		},
+		removeColumn: function() {
+			this.$element.remove();
+		}
+	};
+
   	// klasa cart
   	function Card(description) {
 		var self = this;
@@ -63,11 +63,6 @@ $(function() {
 			var $cardDescription = $('<p>').addClass('card-description').text(self.description);
 			var $cardDelete = $('<button>').addClass('btn-delete').text('x');
 
-			Card.prototype = {
-				removeCard: function() {
-					this.$element.remove();
-				}
-			}
 			// funkcja usuwania cart
 			$cardDelete.click(function(){
         		self.removeCard();
@@ -76,6 +71,11 @@ $(function() {
 			$card.append($cardDelete)
 				.append($cardDescription);
 			return $card;
+		}
+	}
+	Card.prototype = {
+		removeCard: function() {
+			this.$element.remove();
 		}
 	}
 	// nasłuchiwanie zdarzen tablicy
