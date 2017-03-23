@@ -3,8 +3,14 @@ body {
 	font-family: Montserrat;
 	color: #2c3e50;
 	text-align: center;
+	background-image: url('https://images.pexels.com/photos/218434/pexels-photo-218434.jpeg?w=940&h=650&auto=compress&cs=tinysrgb');
+	background-repeat: no-repeat;
+	background-size: 100%;
 }
 
+.board h1 {
+	text-shadow: 2px 2px #cccccc;
+}
 .column {
 	display: inline-flex;
 	align-items: center;
@@ -12,6 +18,7 @@ body {
 	background-color: #bdc3c7;
 	padding: 20px;
 	margin: 5px;
+	opacity: 0.9;
 }
 .column-title {
 	display: flex;
