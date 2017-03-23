@@ -1,3 +1,47 @@
-﻿.card-placeholder {
-	background: red;
+﻿@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body {
+	font-family: Montserrat;
+	color: #2c3e50;
+	text-align: center;
+}
+
+.column {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #bdc3c7;
+	padding: 20px;
+	margin: 5px;
+}
+.column-title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #7f8c8d;
+	color: #ecf0f1;
+	padding: 20px;
+	margin: 20px;
+}
+button {
+	font-size: 20px;
+	opacity: 0.7;
+	color: #2c3e50;
+	padding: 10px;
+	transition: 1s;
+	border-radius: 2%;
+}
+button:hover {
+	opacity: 1;
+	transition: 0.6s;
+}
+.card {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+.card-description {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
 }
