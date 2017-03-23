@@ -9,7 +9,7 @@ body {
 }
 
 .board h1 {
-	text-shadow: 2px 2px #cccccc;
+	text-shadow: 2px 2px 5px #cccccc;
 }
 .column {
 	display: inline-flex;
